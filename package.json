@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "wpe-build": "next build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "wpe-buld": "next build"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "12.1.1",
