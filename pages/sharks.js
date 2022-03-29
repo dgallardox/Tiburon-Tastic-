@@ -11,7 +11,7 @@ export default function Home({ sharks }) {
         <title>Tiburontastic!</title>
       </Head>
       <Nav home="nav-link" sharks="nav-link active" />
-      <div className="cardsDiv">
+      <div id="doc">
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {sharks.map((shark) => (
           <>
