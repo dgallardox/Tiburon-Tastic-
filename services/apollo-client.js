@@ -10,22 +10,3 @@ const client = new ApolloClient({
 })
 
 export default client;
-
-// client.query({
-//   query: gql`
-//   query sharks {
-//     sharks {
-//       nodes {
-//         id
-//         title
-//         description
-//         image {
-//           sourceUrl
-//           link
-//         }
-//       }
-//     }
-//   }
-//   `
-// })
-// .then(res => console.log(res))

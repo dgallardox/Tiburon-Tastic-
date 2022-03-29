@@ -15,6 +15,20 @@ a {
   box-sizing: border-box;
 }
 
+.col {
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.col:hover {
+  transform: scale(1.015);
+} 
+
 #doc {
-  margin-top: 100px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+#titleComp {
+  margin-bottom: 20px;
 }

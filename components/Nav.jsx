@@ -14,6 +14,7 @@ export default function Nav(props) {
           <div className="navbar-nav">
             <Link href="/"><a className={props.home}>Home</a></Link>
             <Link href="/sharks"><a className={props.sharks}>Sharks</a></Link>
+            <Link href="/blog"><a className={props.blog}>Blog</a></Link>
           </div>
         </div>
       </div>

@@ -1,25 +1,24 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { gql } from "@apollo/client";
 import client from "../services/apollo-client";
 import Nav from "../components/Nav";
+import Title from "../components/Title";
 
 export default function Home({ sharks }) {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Tiburontastic!</title>
-      </Head>
-      <Nav home="nav-link" sharks="nav-link active" />
+      <Nav home="nav-link" sharks="nav-link active" blog="nav-link"/>
       <div id="doc">
+        <Title title="Tiburontastic! | Sharks" page="All Sharks"/>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {sharks.map((shark) => (
           <>
             <div className="col">
               <div className="card h-100">
+              <img src={ shark.image.sourceUrl } class="card-img-top" alt="shark-image" /> 
                 <div className="card-body">
-                  <h2 className="card=title">{shark.title}</h2>
-                  <p className="card-text">{shark.description}</p>
+                  <h2 className="card=title">{ shark.title }</h2>
+                  <p className="card-text">{ shark.description }</p>
                 </div>
               </div>
             </div>
