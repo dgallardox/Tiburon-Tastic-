@@ -1,12 +1,17 @@
 import {
   ApolloClient,
   InMemoryCache,
-  gql
+  createHttpLink,
 } from '@apollo/client'
 
-const client = new ApolloClient({
+const link = createHttpLink({
   uri: "https://tiburontastic.wpengine.com/graphql",
-  cache: new InMemoryCache()
+  credentials: 'include',
+})
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link
 })
 
 export default client;

@@ -6,4 +6,10 @@ const nextConfig = {
 
 module.exports = {
   nextConfig,
-}
+  images: {
+    domains: [
+      "tiburontastic.wpengine.com",
+      "images.unsplash.com"
+    ],
+  },
+  }
