@@ -8,7 +8,7 @@ export default function Home({sharks}) {
     <div className={styles.container}>
       <Nav home="nav-link active" sharks="nav-link" />
       <div id="doc">
-      <h1>Test</h1>
+      <h1>Test2</h1>
       </div>
     </div>
   )
