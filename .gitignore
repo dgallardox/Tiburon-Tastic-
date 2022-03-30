@@ -30,3 +30,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#component
+/components/AuthContent.jsx
+/components/useAuth.jsx
