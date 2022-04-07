@@ -43,12 +43,12 @@ export default function Home({ sharks }) {
                       width="100%"
                     />
                   </div>
-                  <div id="rankCircle">{ index+1 }</div>
+                  <div id="rankCircle">#{index+1}</div>
                   <div className="card-body">
-                    <h2 className="card=title">{shark.title}</h2>
+                    <h2 className="card-title">{shark.title}</h2>
                     <p className="card-text">{shark.description}</p>
                   </div>
-                    <button className="btn btn-primary" type="submit" onClick={() => handleLike(shark.id, shark.votes)}>Vote</button>
+                    <button className="btn btn-outline-primary" type="submit" onClick={() => handleLike(shark.id, shark.votes)}>Vote</button>
                   </Card>
               </div>
             </>

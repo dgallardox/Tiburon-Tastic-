@@ -1,5 +1,9 @@
-export default function Button(props, {onClick}) {
+export default function Button(props) {
+
+  const test = () => {
+    console.log("testing")
+  }
   return (
-    <button type="submit" onClick={onClick}>{props.text}</button>
+    <button className="btn btn-outline-primary" type="submit" onClick={props.function}>{props.text}</button>
   )
 }

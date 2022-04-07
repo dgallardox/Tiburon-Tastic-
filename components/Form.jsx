@@ -1,4 +1,5 @@
 import Card from "./Card"
+import Button from "./Button"
 
 export default function Form(props) {
   return (
@@ -7,7 +8,6 @@ export default function Form(props) {
   <div className="form-group">
     <label>Email address</label>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" className="form-text text-muted">Well never share your email with anyone else.</small>
   </div>
   <div className="form-group">
     <label>Password</label>
@@ -15,9 +15,9 @@ export default function Form(props) {
   </div>
   <div className="form-check">
     <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-    <label className="form-check-label">Check me out</label>
-  </div>
-  <button type="submit" className="btn btn-primary">Submit</button>
+    <label className="form-check-label">I agree to the terms and conditions</label>
+        </div>
+        <Button text="submit" function={ props.function }/>
 </form>
     </Card>
   )
