@@ -7,7 +7,9 @@ export default function Submit() {
   return (
     <>
       <Layout title="Submit" submit="nav-link active" home="nav-link" blog="nav-link" >
-        <Form function="test" />
+        <Form>
+          <h2>test</h2>
+        </Form>
       </Layout>
     </>
   )

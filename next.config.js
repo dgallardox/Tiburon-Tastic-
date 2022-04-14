@@ -9,7 +9,8 @@ module.exports = {
   images: {
     domains: [
       "tiburontastic.wpengine.com",
-      "images.unsplash.com"
+      "images.unsplash.com",
+      "i.ibb.co"
     ],
   },
   }

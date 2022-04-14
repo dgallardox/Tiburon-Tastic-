@@ -6,12 +6,14 @@ import Title from "./Title"
 
 export default function Layout(props) {
   return (
-    <>
+    <div className="docDiv">
+      <div id="footerDiv">
       <Nav home={props.home} blog={props.blog} submit={props.submit} />
       <div id="doc">
         <Title title={props.title}/>
       { props.children }
+      </div>
+        </div>
     </div>
-    </>
   )
 }

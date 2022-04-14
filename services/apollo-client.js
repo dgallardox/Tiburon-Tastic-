@@ -1,11 +1,13 @@
 import {
   ApolloClient,
   InMemoryCache,
-  createHttpLink,
+  createHttpLink
 } from '@apollo/client'
 
+const endPoint = "https://tiburontastic.wpengine.com"
+
 const link = createHttpLink({
-  uri: "https://tiburontastic.wpengine.com/graphql",
+  uri: `${endPoint}/graphql`,
   credentials: 'include',
 })
 
