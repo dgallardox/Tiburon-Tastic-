@@ -13,7 +13,7 @@ export default function UnAuthContent({children}) {
       router.push('/members');
     }
   }, [loggedIn, loading, router]);
-
+  
   if (!loggedIn) {
     return <>{children}</>
   }

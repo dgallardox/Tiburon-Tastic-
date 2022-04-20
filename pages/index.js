@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { gql, useMutation, useQuery } from "@apollo/client";
 import client from "../services/apollo-client";
-import Card from "../components/Card";
 import Layout from "../components/Layout";
-import { useRouter } from "next/router";
 import useAuth from "../hooks/useAuth";
-
+import CardActions from '@mui/material/CardActions';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
 
 const DELETE_MUTATION = gql`
       mutation DeleteShark {
@@ -28,38 +30,27 @@ export default function Home({ sharks }) {
   
 
   return (
-      <Layout title="Home" home="nav-link active" blog="nav-link" submit="nav-link" >
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-          {sharks.map((shark, index) => (
-            <>
-              <div className="col">
-                <Card>
-
-                  <div className="card-img-top">
-                    <Image
-                      src={shark.image.sourceUrl}
-                      alt="shark-image"
-                      layout="responsive"
-                      height="80px"
-                      width="100%"
-                    />
-                  </div>
-                  <div id="rankCircle">#{index+1}</div>
-                  <div className="card-body">
+      <Layout>
+          {sharks.map((shark) => (
+            // eslint-disable-next-line react/jsx-key
+            <Card sx={{ minWidth: 275 }}>
+              <CardMedia
+                component="img"
+                image={shark.image.sourceUrl}
+              />
+              <CardContent>
                     <h2 className="card-title">{shark.title}</h2>
-                    <p>{ shark.votes } votes</p>
                     <p className="card-text">{shark.description}</p>
-                  </div>
-                  {!loggedIn ? (
-                     <></>
-                  ) : (
+                  {loggedIn && (
                     <button className="btn btn-outline-primary" type="submit" onClick={deleteShark}>Delete</button> 
-                    )}
-                  </Card>
-              </div>
-            </>
+                )}
+              </CardContent>
+              <CardActions>
+                <Button size="small">Share</Button>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+                </Card>
           ))}
-        </div>
       </Layout>
   );
 }

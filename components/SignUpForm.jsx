@@ -1,5 +1,6 @@
 import { useMutation, gql } from "@apollo/client";
 import Link from "next/link";
+import Checkbox from '@mui/material/Checkbox';
 
 const REGISTERED_USER = gql`
 mutation registerUser(
@@ -78,7 +79,10 @@ export default function SignUpForm() {
           ) : (
             <p className="error-message">{error.message}</p>
           ))
-        ) : null}
+            ) : null}
+            <Checkbox
+              required
+            /> <br />
         <button type="submit" disabled={loading}>
           {loading ? 'Signing up...' : 'Sign up'}
         </button>

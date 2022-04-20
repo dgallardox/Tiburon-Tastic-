@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { useMutation, gql } from "@apollo/client";
 import { GET_USER } from "../hooks/useAuth";
+import { TextField } from "@mui/material";
+import CardLayout from "./Card";
+import Box from '@mui/material/Box';
+import { Button } from "@mui/material";
+
 
 const LOG_IN = gql`
   mutation logIn($login: String!, $password: String!) {
@@ -44,39 +49,42 @@ export default function LogInForm() {
     }
   
   return (
-    <div className="shadow p-3 mb-5 bg-white rounded">
-      <div className="card h-100">
-        
+
+    <CardLayout>
     <form method="post" onSubmit={handleSubmit}>
       <fieldset disabled={loading} aria-busy={loading}>
-        <label htmlFor="log-in-email">Email</label>
-        <input
-          id="log-in-email"
-          type="email"
-          name="email"
-          autoComplete="username"
-          required
-        />
-        <label htmlFor="log-in-password">Password</label>
-        <input
-          id="log-in-password"
-          type="password"
-          name="password"
-          autoComplete="current-password"
-          required
-        />
+          <TextField
+            id="log-in-email"
+            label="email"
+            type="email"
+            name="email"
+            autoComplete="username"
+            required
+          /><br />
+        
+          <TextField
+            id="log-in-password"
+            label="password"
+            type="password"
+            name="password"
+            autoComplete="current-password"
+            required
+          /><br />
+
         <Link href="/forgot-password">
           <a className="forgot-password-link">Forgot password?</a>
-        </Link>
+        </Link><br />
         {!isEmailValid ? (
           <p className="error-message">Invalid email. Please try again.</p>
         ) : null}
         {!isPasswordValid ? (
           <p className="error-message">Invalid password. Please try again.</p>
-        ) : null}
-        <button type="submit" disabled={loading}>
+          ) : null}
+          
+        <Button variant="contained" type="submit" disabled={loading}>
           {loading ? 'Logging in...' : 'Log in'}
-        </button>
+        </Button>
+          
       </fieldset>
       <p className="account-sign-up-message">
         Don&#39;t have an account yet?{' '}
@@ -84,8 +92,8 @@ export default function LogInForm() {
           <a>Sign up</a>
         </Link>
       </p>
-        </form>
-      </div>
-      </div>
+      </form>
+      </CardLayout>
+
   );
 }

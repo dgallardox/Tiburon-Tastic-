@@ -17,10 +17,27 @@ import Avatar from '@mui/material/Avatar';
 export default function Nav(props) {
   const { loggedIn } = useAuth();
 
-  const loggedOutPages = [['home', '/'], ['login', '/log-in']]
-  const loggedInPages = [['home', '/'], ['logout', '/log-out']]
+  const loggedOutPages = [
+    ['home', '/'],
+    ['login', '/log-in'],
+    ['sign up', '/sign-up']
+  ]
+  const loggedInPages = [
+    ['home', '/'],
+    ['logout', '/log-out']
+  ]
 
-  const accountSettings = [['Profile', '/profile'], ['Account', '/account'], ['Dashboard', '/dashboard'], ['Logout', '/logout']];
+  const accountSettings = [
+    ['Profile', '/profile'],
+    ['Account', '/account'],
+    ['Dashboard', '/dashboard'],
+    ['Logout', '/logout']
+  ]
+
+  const loggedOutSettings = [
+    ['Login', '/log-in'],
+    ['Sign up', '/sign-up']
+  ]
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -51,7 +68,7 @@ export default function Nav(props) {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex'} }}
           >
-            Logged-out
+            Tiburontastic
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -100,7 +117,7 @@ export default function Nav(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            Logged-out
+            Tiburontastic
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
@@ -140,7 +157,7 @@ export default function Nav(props) {
               onClose={handleCloseUserMenu}
             >
 
-              {accountSettings.map((setting) => (
+              {loggedOutSettings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu} href={setting[1]}>
                   <Typography textAlign="center">
                     <Link href={setting[1]}><a>
@@ -167,7 +184,7 @@ export default function Nav(props) {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex'} }}
           >
-            Logged-in
+            Tiburontastic
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -216,7 +233,7 @@ export default function Nav(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            Logged-in
+            Tiburontastic
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 

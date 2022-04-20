@@ -1,10 +1,12 @@
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
-export default function Card(props) {
+export default function CardLayout({children}) {
   return (
-    <div className="shadow p-3 mb-5 bg-white rounded">
-      <div className="card h-100">
-        { props.children }
-      </div>
-    </div>
+      <Card sx={{ minWidth: 275 }}>
+        <CardContent>
+          {children}
+        </CardContent>
+      </Card>
   )
 }
