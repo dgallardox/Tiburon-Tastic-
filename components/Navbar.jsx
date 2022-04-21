@@ -28,7 +28,6 @@ export default function Nav(props) {
   ]
 
   const accountSettings = [
-    ['Profile', '/profile'],
     ['Account', '/account'],
     ['Dashboard', '/dashboard'],
     ['Logout', '/logout']

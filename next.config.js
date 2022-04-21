@@ -5,7 +5,6 @@ const nextConfig = {
 }
 
 module.exports = {
-  webpack5: true ,
   nextConfig,
   images: {
     domains: [
