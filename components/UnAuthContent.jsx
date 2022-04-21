@@ -3,7 +3,8 @@ import { useRouter } from "next/router";
 
 import useAuth from "../hooks/useAuth";
 
-export default function UnAuthContent({children}) {
+export default function UnAuthContent({ children }) {
+  
   const { loggedIn, loading } = useAuth();
   const router = useRouter();
 
