@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
-import UnAuthContent from "../components/unAuthContent";
 import SignUpForm from "../components/SignUpForm";
-import Card from "../components/Card";
+import UnAuthContent from "../components/UnAuthContent";
 
 export default function SignUp() {
   return (

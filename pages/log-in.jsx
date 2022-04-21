@@ -1,7 +1,6 @@
-import UnAuthContent from "../components/unAuthContent";
 import LogInForm from "../components/LogInForm";
 import Layout from "../components/Layout";
-import Form from "../components/Form";
+import UnAuthContent from "../components/UnAuthContent";
 
 export default function logIn() {
   return (
