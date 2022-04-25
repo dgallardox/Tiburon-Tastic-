@@ -12,8 +12,8 @@ body {
 }
 
 a {
+  color: white;
   text-decoration: none;
-  color: '#000';
 }
 
 button {
@@ -22,13 +22,13 @@ button {
 }
 
 
-.col {
+#onHover {
   transition: transform .2s;
   cursor: pointer;
 }
 
 
-.col:hover {
+#onHover:hover {
   transform: scale(1.015);
 } 
 
@@ -37,7 +37,6 @@ button {
   width: 90%;
   margin: 0 auto;
   margin-top: 25px;
-  text-align: center;
 }
 
 .docDiv {
@@ -53,7 +52,7 @@ form {
 
 
 #titleDiv {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 /* 

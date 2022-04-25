@@ -97,15 +97,16 @@ export default function Nav(props) {
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
-            >
+                  >
+                    
+
               {loggedOutPages.map((page, i) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} to="/">
+                  <MenuItem key={page} onClick={handleCloseNavMenu} to="/">
                   <Typography textAlign="center">
-                    <Link href={page[1]}><a>
                       {page[0]}
-                    </a></Link>
                   </Typography>
-                </MenuItem>
+                  </MenuItem>
+
               ))}
 
             </Menu>
@@ -126,9 +127,7 @@ export default function Nav(props) {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link href={page[1]}><a>
                   {page[0]}
-                </a></Link>
               </Button>
             ))}
 
@@ -159,9 +158,7 @@ export default function Nav(props) {
               {loggedOutSettings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu} href={setting[1]}>
                   <Typography textAlign="center">
-                    <Link href={setting[1]}><a>
                       {setting[0]}
-                    </a></Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -171,8 +168,10 @@ export default function Nav(props) {
         </Toolbar>
       </Container>
     </AppBar>
-      </>
-    ) : (
+        </>
+        //////////////////////////////////////
+      ) : (
+        //////////////////////////////////////
           <>
                 <AppBar position="static" enableColorOnDark>
       <Container maxWidth="xl">
@@ -217,9 +216,9 @@ export default function Nav(props) {
               {loggedInPages.map((page, i) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu} to="/">
                   <Typography textAlign="center">
-                    <Link href={page[1]}><a>
+                    <a href={page[1]}>
                       {page[0]}
-                    </a></Link>
+                    </a>
                   </Typography>
                 </MenuItem>
               ))}
@@ -242,9 +241,9 @@ export default function Nav(props) {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link href={page[1]}><a>
+                <a href={page[1]}>
                   {page[0]}
-                </a></Link>
+                </a>
               </Button>
             ))}
 
@@ -275,9 +274,9 @@ export default function Nav(props) {
               {accountSettings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu} href={setting[1]}>
                   <Typography textAlign="center">
-                    <Link href={setting[1]}><a>
+                    <a href={setting[1]}>
                       {setting[0]}
-                    </a></Link>
+                    </a>
                   </Typography>
                 </MenuItem>
               ))}

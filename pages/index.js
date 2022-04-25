@@ -8,6 +8,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 
 const DELETE_MUTATION = gql`
       mutation DeleteShark {
@@ -30,10 +31,13 @@ export default function Home({ sharks }) {
   
 
   return (
-      <Layout>
+    <Layout title="All Sharks">
+      <Grid container spacing={3}>
           {sharks.map((shark) => (
             // eslint-disable-next-line react/jsx-key
-            <Card sx={{ minWidth: 275 }}>
+            <Grid item sm={12} md={6} xl={4}>
+              <div id="onHover">
+              <Card sx={{ minWidth: 275 }}>
               <CardMedia
                 component="img"
                 image={shark.image.sourceUrl}
@@ -50,7 +54,10 @@ export default function Home({ sharks }) {
                 <Button size="small">Learn More</Button>
               </CardActions>
                 </Card>
+                </div>
+              </Grid>
           ))}
+        </Grid>
       </Layout>
   );
 }
@@ -63,7 +70,6 @@ export async function getServerSideProps() {
           nodes {
             id
             title
-            votes
             description
             image {
               sourceUrl
