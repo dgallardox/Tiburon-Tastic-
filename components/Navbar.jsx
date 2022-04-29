@@ -167,13 +167,11 @@ export default function Nav(props) {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
-        </>
-        //////////////////////////////////////
+      </AppBar>
+      </>
       ) : (
-        //////////////////////////////////////
-          <>
-                <AppBar position="static" enableColorOnDark>
+      <>
+      <AppBar position="static" enableColorOnDark>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -280,7 +278,6 @@ export default function Nav(props) {
                   </Typography>
                 </MenuItem>
               ))}
-
             </Menu>
           </Box>
         </Toolbar>

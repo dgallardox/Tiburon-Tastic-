@@ -9,6 +9,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import Link from 'next/link'
 
 const DELETE_MUTATION = gql`
       mutation DeleteShark {
@@ -49,9 +50,10 @@ export default function Home({ sharks }) {
                     <button className="btn btn-outline-primary" type="submit" onClick={deleteShark}>Delete</button> 
                 )}
               </CardContent>
-              <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                  <CardActions>
+                    <Link href={`/sharks/${shark.databaseId}`}><a>Read More</a></Link>
+                {/* <Button size="small">Share</Button>
+                <Button size="small">Learn More</Button> */}
               </CardActions>
                 </Card>
                 </div>
@@ -70,6 +72,7 @@ export async function getServerSideProps() {
           nodes {
             id
             title
+            databaseId
             description
             image {
               sourceUrl
