@@ -10,6 +10,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Link from 'next/link'
+import Toolbar from "../components/Toolbar";
 
 const DELETE_MUTATION = gql`
       mutation DeleteShark {
@@ -32,6 +33,8 @@ export default function Home({ sharks }) {
   
 
   return (
+    <>
+    <Toolbar />
     <Layout title="All Sharks">
       <Grid container spacing={3}>
           {sharks.map((shark) => (
@@ -61,7 +64,8 @@ export default function Home({ sharks }) {
           ))}
         </Grid>
       </Layout>
-  );
+      </>
+      );  
 }
 
 export async function getServerSideProps() {
