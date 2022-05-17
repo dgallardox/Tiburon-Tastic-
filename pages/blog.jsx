@@ -16,7 +16,7 @@ export default function blog({ posts }) {
           <Card>
           <div id="postsDiv">
                 <h4>{post.title}</h4>
-                <p>hello</p>
+                <p>hello 2</p>
             <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
               </div>
             </Card>
