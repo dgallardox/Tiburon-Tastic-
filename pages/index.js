@@ -43,7 +43,8 @@ export default function Home({ sharks }) {
               <CardMedia
                 component="img"
                 image={shark.image.sourceUrl}
-              />
+                  />
+                  <p>testing</p>
               <CardContent>
                     <h2 className="card-title">{shark.title}</h2>
           
