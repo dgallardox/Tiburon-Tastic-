@@ -15,7 +15,8 @@ export default function blog({ posts }) {
           <div className="col">
           <Card>
           <div id="postsDiv">
-            <h4>{post.title}</h4>
+                <h4>{post.title}</h4>
+                <p>hello</p>
             <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
               </div>
             </Card>
