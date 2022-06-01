@@ -1,5 +1,6 @@
 import { useQuery, gql, ApolloError } from "@apollo/client";
 import React, { createContext, useContext, ReactNode } from "react";
+import client from "../services/apollo-client";
 
 const DEFAULT_STATE = {
   loggedIn: false,
@@ -22,6 +23,8 @@ query getUser {
   }
 }
 `;
+
+const { viewer } = client;
 
 export function AuthProvider({ children }) {
   const { data, loading, error } = useQuery(GET_USER);

@@ -33,7 +33,7 @@ export default function Home({ sharks }) {
 
   return (
     <>
-    <Layout title="All Sharks">
+    <Layout title="All Animals">
       <Grid container spacing={3}>
           {sharks.map((shark) => (
             // eslint-disable-next-line react/jsx-key
