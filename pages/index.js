@@ -44,10 +44,8 @@ export default function Home({ sharks }) {
                 component="img"
                 image={shark.image.sourceUrl}
                   />
-                  <p>testing</p>
               <CardContent>
                     <h2 className="card-title">{shark.title}</h2>
-          
                     <p className="card-text">{shark.description}</p>
                   {loggedIn && (
                     <button className="btn btn-outline-primary" type="submit" onClick={deleteShark}>Delete</button> 
